@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build-ess": "node-sass --include-path sess sess/style.sess css/main.css",
-    "watch-css": "nodemon -e sess -x \"npm run build-ess\""
+    "build": "sass scss:css",
+    "watch": "sass scss:css --watch"
   },
   "keywords": [
     "developer"
@@ -14,6 +14,7 @@
   "author": "Matias Miranda Otero",
   "license": "MIT",
   "devDependencies": {
-    "nodemon": "^2.0.20"
+    "nodemon": "^2.0.20",
+    "sass": "^1.55.0"
   }
 }

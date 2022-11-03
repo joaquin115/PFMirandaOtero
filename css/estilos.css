@@ -138,11 +138,12 @@ body {
     margin-bottom: -1rem;
     display: flex;
     flex-direction: row-reverse;
-    width: auto;
+    width: 100%;
     justify-content: center;
     height: 40px;
     background-color: rgb(49, 47, 47);
     color: white;
-    position: relative;
+    position: absolute;
     bottom: 0;
+    top: 100%;
   }
