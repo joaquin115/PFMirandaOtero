@@ -31,7 +31,7 @@ body {
   margin: 0 auto;
 }
 .container-carrousel {
-  background-color: #2f5ce2;
+  background-color: 49 47 47;
 }
 .container-blog {
   display: grid;
@@ -54,7 +54,7 @@ body {
 }
 
 .background {
-  background: rgb(8, 71, 245);
+  background: blue;
 }
 
 .text-center {
