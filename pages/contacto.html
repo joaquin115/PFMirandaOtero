@@ -4,110 +4,153 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pagina de viajes">
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/estilos.css">
     <link rel="icon" type="image/x-icon" href="../images/contacto2.png" />
     <title>contacto</title>
 </head>
-<body>
-    <header>
-        <nav class="navbar bg-dark navbar-dark">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="../index.html">
-                <img src="../images/portada.jpg" alt="Avatar Logo" style="width:40px;" class="rounded-pill">
-              </a>
-              <h2 style=color:white>
-                Formulario de contacto 
-            </h2>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-                <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                    <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="contacto.html">Contacto</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="miperfil.html">Mi Perfil</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="publicaciones.html">Publicaciones</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="nosotros.html">Nosotros</a>
-                    </li>    
-                    </ul>
+
+<main>
+    <body>
+        <header>
+            <nav class="navbar bg-dark navbar-dark">
+                <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html">
+                    <img src="../images/portada.jpg" alt="Avatar Logo" style="width:40px;" class="rounded-pill">
+                </a>
+                <h1 style=color:white>Contacto </h1>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                        <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html">Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="miperfil.html">Mi Perfil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="publicaciones.html">Publicaciones</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="nosotros.html">Nosotros</a>
+                        </li>    
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div class="home">
+            <div class="container">
+
+                <div class="contact_form">
+
+                    <div class="formulario">      
+                    <h1>Formulario de contacto</h1>
+                        <h3>Escríbenos y en breve los pondremos en contacto contigo</h3>
+                
+                
+                        <form action="submeter-formulario.php" method="post">       
+                
+                            
+                                <p>
+                                <label for="nombre" class="colocar_nombre">Nombre
+                                    <span class="obligatorio">*</span>
+                                </label>
+                                    <input type="text" name="introducir_nombre" id="nombre" required="obligatorio" placeholder="Escribe tu nombre">
+                                </p>
+                            
+                                <p>
+                                <label for="email" class="colocar_email">Email
+                                    <span class="obligatorio">*</span>
+                                </label>
+                                    <input type="email" name="introducir_email" id="email" required="obligatorio" placeholder="Escribe tu Email">
+                                </p>
+                            
+                                <p>
+                                <label for="telefone" class="colocar_telefono">Teléfono
+                                </label>
+                                    <input type="tel" name="introducir_telefono" id="telefono" placeholder="Escribe tu teléfono">
+                                </p>    
+                            
+                                <p>
+                                <label for="website" class="colocar_website">Sitio web
+                                </label>
+                                    <input type="url" name="introducir_website" id="website" placeholder="Escribe la URL de tu web">
+                                </p>    
+                            
+                                <p>
+                                <label for="asunto" class="colocar_asunto">Asunto
+                                    <span class="obligatorio">*</span>
+                                </label>
+                                    <input type="text" name="introducir_asunto" id="assunto" required="obligatorio" placeholder="Escribe un asunto">
+                                </p>    
+                            
+                                <p>
+                                <label for="mensaje" class="colocar_mensaje">Mensaje
+                                    <span class="obligatorio">*</span>
+                                </label>                     
+                                    <textarea name="introducir_mensaje" class="texto_mensaje" id="mensaje" required="obligatorio" placeholder="Deja aquí tu comentario..."></textarea> 
+                                </p>                    
+                            
+                                <button-formulario type="submit" name="enviar_formulario" id="enviar" ><p>Enviar</p></button-formulario>
+                
+                                <p class="aviso">
+                                <span class="obligatorio"> * </span>los campos son obligatorios.
+                                </p>          
+                            
+                        </form>
+                    </div>  
+                </div>
+                
+                </body>
+                </html>
+                
+            
+                <!-- The Modal -->
+                <div class="modal" id="myModal">
+                <div class="modal-dialog">
+                <div class="modal-content">
+            
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                    <h4 class="modal-title">Su Peticion de contacto fue enviada con exito</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+            
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        Muchas Gracias! Dentro de 48hs nos estaremos comunicando con usted.
+                    </div>
+                    <!-- Fading modal -->
+                    <div class="modal fade"></div>
+
+                    <!-- Modal without animation -->
+                    <div class="modal"></div>
+            
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+            
                 </div>
             </div>
-        </nav>
-    </header>
-    <div class="text-center">
-        <div class="py-5 bg-dark">
-            <h3 style=color:white>
-            Te dejamos este espacio para que te comuniques con nosotros y nos cuentes tus inquietudes.
-            <br>Muchas Gracias!
-            </h3>
-    
-            <form action="formulario.html" method="POST" style=color:white>
-                <li>
-                    <label for="nombre">Nombre:</label>
-                    <input type="text" id="nombre" name="nombre" />
-                </li>
-                <li>    
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" />
-                </li>
-                <li>
-                    <label for="mensaje">Mensaje:</label>
-                    <textarea id="mensaje" name="mensaje"></textarea>
-                </li>
-                <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#myModal">
-                    enviar
-                </button>
-            </form>
-        </div>
+        </div>    
     </div>
-   
-    <!-- The Modal -->
-<div class="modal" id="myModal">
-    <div class="modal-dialog">
-      <div class="modal-content">
-  
-        <!-- Modal Header -->
-        <div class="modal-header">
-          <h4 class="modal-title">Su Peticion de contacto fue enviada con exito</h4>
-          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-        </div>
-  
-        <!-- Modal body -->
-        <div class="modal-body">
-            Muchas Gracias! Dentro de 48hs nos estaremos comunicando con usted.
-        </div>
-        <!-- Fading modal -->
-        <div class="modal fade"></div>
+        
+        <footer class="bg-dark py-4" >
+            <div class="container px-5">
+                <div class="row align-items-center justify-content-between flex-column flex-sm-row" >
+                    <div class="small m-0 text-white"><p style="text-align: center;">Copyright &copy; Millas Viajeras 2022</p></div>
+                </div>
+            </div>
+        </footer> 
+        <!-- JavaScript Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 
-        <!-- Modal without animation -->
-        <div class="modal"></div>
-  
-        <!-- Modal footer -->
-        <div class="modal-footer">
-          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
-        </div>
-  
-      </div>
-    </div>
-  </div>
-    
-<footer class="bg-dark py-4">
-    <div class="container px-5">
-        <div class="row align-items-center justify-content-between flex-column flex-sm-row" >
-            <div class="small m-0 text-white"><p style="text-align: center;">Copyright &copy; Millas Viajeras 2022</p></div>
-        </div>
-    </div>
-</footer>  
-    <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-
-</body>
+    </body>
+</main>
 </html>
