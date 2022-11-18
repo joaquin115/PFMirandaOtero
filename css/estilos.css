@@ -3,6 +3,35 @@ body {
   margin: 0;
 }
 
+@media screen and (min-width: 600px) {
+  .contact_form {
+    width: auto;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 600px) {
+  .container-blog {
+    height: 400px;
+    width: 100%;
+    padding-right: 30px;
+  }
+  .container-blog-parrafo {
+    height: 30%;
+    width: 100%;
+  }
+  .container-blog__article {
+    height: 70%;
+    width: 100%;
+  }
+  .container-blog__img {
+    height: 100%;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 600px) {
+  .footer {
+    width: 100%;
+  }
+}
 .header {
   position: sticky;
   top: 0;
@@ -29,12 +58,14 @@ body {
   width: 100%;
   max-width: 1140px;
   padding: 0 20px;
-  margin: 0 auto;
+  margin: margin 0;
   min-width: 250px;
 }
+
 .container-carrousel {
   background-color: #222429;
 }
+
 .container-blog {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -42,13 +73,17 @@ body {
   grid-gap: 10px;
   grid-template-areas: "Paris,-Francia Londres,-Inglaterra Roma,-Italia" "Madrid,-España Machu-Pichu,-Peru New-York,-Estados-Unidos";
 }
+
 .container-blog__article {
   background-color: #2f5ce2;
+  margin: 15px;
 }
+
 .container-blog__img {
   width: 100%;
   height: 100%;
 }
+
 .container-blog-parrafo {
   margin: 0;
   text-align: center;
@@ -148,12 +183,23 @@ body {
   color: white;
 }
 
-.seccion-perfil-usuario .perfil-usuario-body,
-.seccion-perfil-usuario {
+.seccion-perfil-usuario .perfil-usuario-body, .seccion-perfil-usuario {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
+}
+.seccion-perfil-usuario .perfil-usuario-body .perfil-usuario-footer, .seccion-perfil-usuario .perfil-usuario-body .perfil-usuario-bio, .seccion-perfil-usuario .perfil-usuario-footer, .seccion-perfil-usuario .perfil-usuario-bio {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  border-radius: 15px;
+  width: 100%;
+}
+.seccion-perfil-usuario .perfil-usuario-body .perfil-usuario-portada, .seccion-perfil-usuario .perfil-usuario-body .perfil-usuario-body, .seccion-perfil-usuario .perfil-usuario-portada, .seccion-perfil-usuario .perfil-usuario-body {
+  width: 95%;
 }
 
 .seccion-perfil-usuario .perfil-usuario-header {
@@ -177,7 +223,6 @@ body {
   background-position: center;
   background-size: cover;
 }
-
 .seccion-perfil-usuario .perfil-usuario-portada .boton-portada {
   position: absolute;
   top: 1rem;
@@ -189,7 +234,6 @@ body {
   color: #fff;
   cursor: pointer;
 }
-
 .seccion-perfil-usuario .perfil-usuario-portada .boton-portada i {
   margin-right: 1rem;
 }
@@ -209,13 +253,11 @@ body {
   left: calc(50% - 90px);
   z-index: 1;
 }
-
 .seccion-perfil-usuario .perfil-usuario-avatar img {
   width: 100%;
   position: relative;
   border-radius: 50%;
 }
-
 .seccion-perfil-usuario .perfil-usuario-avatar .boton-avatar {
   position: absolute;
   left: -2px;
@@ -234,28 +276,15 @@ body {
   position: relative;
   max-width: 750px;
 }
-
 .seccion-perfil-usuario .perfil-usuario-body .titulo {
   display: block;
   width: 100%;
   font-size: 1.75em;
   margin-bottom: 0.5rem;
 }
-
 .seccion-perfil-usuario .perfil-usuario-body .texto {
   color: #848484;
   font-size: 0.95em;
-}
-
-.seccion-perfil-usuario .perfil-usuario-footer,
-.seccion-perfil-usuario .perfil-usuario-bio {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 1.5rem 2rem;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
-  background-color: #fff;
-  border-radius: 15px;
-  width: 100%;
 }
 
 .seccion-perfil-usuario .perfil-usuario-bio {
@@ -267,11 +296,9 @@ body {
   width: 50%;
   list-style: none;
 }
-
 .seccion-perfil-usuario .lista-datos li {
   padding: 5px 0;
 }
-
 .seccion-perfil-usuario .lista-datos li > .icono {
   margin-right: 1rem;
   font-size: 1.2rem;
@@ -285,7 +312,6 @@ body {
   display: flex;
   flex-direction: column;
 }
-
 .seccion-perfil-usuario .redes-sociales .boton-redes {
   border: 0;
   background-color: #fff;
@@ -300,9 +326,12 @@ body {
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
   font-size: 1.3rem;
 }
-
 .seccion-perfil-usuario .redes-sociales .boton-redes + .boton-redes {
   margin-top: 0.5rem;
+}
+.seccion-perfil-usuario .redes-sociales .boton-redes + .boton-redes {
+  margin-left: 1rem;
+  margin-top: 0;
 }
 
 .seccion-perfil-usuario .boton-redes.facebook {
@@ -317,44 +346,30 @@ body {
   background: linear-gradient(45deg, #FF2DFD, #40A7FF);
 }
 
-/* adaptacion a dispositivos */
-@media (max-width: 750px) {
-  .seccion-perfil-usuario .lista-datos {
-    width: 100%;
-  }
-  .seccion-perfil-usuario .perfil-usuario-portada,
-.seccion-perfil-usuario .perfil-usuario-body {
-    width: 95%;
-  }
-  .seccion-perfil-usuario .redes-sociales {
-    position: relative;
-    flex-direction: row;
-    width: 100%;
-    left: 0;
-    text-align: center;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    align-items: center;
-    justify-content: center;
-  }
-  .seccion-perfil-usuario .redes-sociales .boton-redes + .boton-redes {
-    margin-left: 1rem;
-    margin-top: 0;
-  }
+.seccion-perfil-usuario .redes-sociales {
+  position: relative;
+  flex-direction: row;
+  width: 100%;
+  left: 0;
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  align-items: center;
+  justify-content: center;
 }
+
 .mensaje a {
   color: inherit;
   margin-right: 0.5rem;
   display: inline-block;
 }
-
 .mensaje a:hover {
   color: #309B76;
   transform: scale(1.4);
 }
 
 .contact_form {
-  width: 460px;
+  width: 100%;
   height: auto;
   margin: 80px auto;
   border-radius: 10px;
@@ -362,11 +377,24 @@ body {
   padding-bottom: 20px;
   background-color: #fbfbfb;
   padding-left: 30px;
+  padding-right: 30px;
+}
+.contact_form .formulario h1 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+.contact_form .formulario h3 {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 30px;
 }
 
 input {
   background-color: #fbfbfb;
-  width: 408px;
+  width: 100%;
   height: 40px;
   border-radius: 5px;
   border-style: solid;
@@ -374,12 +402,13 @@ input {
   border-color: #1411cf;
   margin-top: 10px;
   padding-left: 10px;
+  padding-right: 10px;
   margin-bottom: 20px;
 }
 
 textarea {
   background-color: #fbfbfb;
-  width: 405px;
+  width: 100%;
   height: 150px;
   border-radius: 5px;
   border-style: solid;
@@ -400,14 +429,14 @@ button-formulario {
   height: 45px;
   padding-left: 5px;
   padding-right: 5px;
-  margin-bottom: 20px;
-  margin-top: 10px;
+  padding-bottom: 5px;
+  padding-top: 9px;
   text-transform: uppercase;
   background-color: #2715cf;
   border-color: #2216c2;
   border-style: solid;
   border-radius: 10px;
-  width: 420px;
+  width: 100%;
   text-align: center;
   cursor: pointer;
 }
